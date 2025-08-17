@@ -1,0 +1,4 @@
+Version 1.24b (17.08.2025)
+- added functionality of hd-mod to skip dialogues when visiting new objects
+- added Observatory (for water terrain) to the Map Editor
+- updated a def of Observatory (for ground terrain) - special thanks to [WGFX] Grossmaestro
