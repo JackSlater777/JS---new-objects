@@ -1,3 +1,6 @@
+Version 1.24c (26.08.2025)
+- fixed a bug: after visiting a Hermit Shack and learning an adv/exp Scouting the scouting radius wasn't updated
+
 Version 1.24b (17.08.2025)
 - added functionality of hd-mod to skip dialogues when visiting new objects
 - added Observatory (for water terrain) to the Map Editor
