@@ -1,3 +1,6 @@
+Version 1.24d (30.08.2025)
+- deleted erm-file with scouting fixes - it isnot needed anymore
+
 Version 1.24c (26.08.2025)
 - fixed a bug: after visiting a Hermit Shack and learning an adv/exp Scouting the scouting radius wasn't updated
 
