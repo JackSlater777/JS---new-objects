@@ -1,3 +1,25 @@
+Version 1.24e (21.09.2025)
+- added custom description for bonuses/penalties to morale/luck for visiting mineral spring and grave
+
+- changes for temple of loyalty:
+	- improved AI logic
+	- the flag for visiting an object now falls off the hero before the turn of the player who owns the hero, and not before the turn of the red player
+
+- changes for watering place:
+	- improved AI logic
+
+- changes for mineral spring:
+	- improved AI logic
+
+- changes for hermits shack:
+	- implemented pseudo-random to calculate a skill id to upgrade
+
+- changes for grave:
+	- improved AI logic
+	- a sound after digging a grave has been removed
+	- AI now properly equipes an artifact after digging a grave
+	
+
 Version 1.24d (30.08.2025)
 - deleted erm-file with scouting fixes - it isnot needed anymore
 

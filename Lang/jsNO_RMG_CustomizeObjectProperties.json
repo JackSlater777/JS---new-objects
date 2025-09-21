@@ -48,7 +48,8 @@
                     ],
                     "text": {
                         "visit": "\n\nThis grave is fresh, and no one has even had time to take away the shovel that was used to dig it. It will take a whole day of excavation to get to the treasure.",
-                        "visited": "\n\nThis grave is fresh, and no one has even had time to take away the shovel that was used to dig it. Using it and tying a handkerchief around your nose, you extract something valuable from the earth."
+                        "visited": "\n\nThis grave is fresh, and no one has even had time to take away the shovel that was used to dig it. Using it and tying a handkerchief around your nose, you extract something valuable from the earth.",
+                        "effectDesc": "Grave Digging -3"
                     }
                 }
             },
@@ -117,7 +118,8 @@
                     "text": {
                         "hint": "(+1 to luck until the next battle and +600 to movement for 1 day)",
                         "visit": "\n\nThe horses are reluctant to drink the brackish water from the spring, but soon you see that the steeds have clearly gained strength. A cheerful rainbow appears in the spray of water above the bubbling spring, which puts your squad in a great mood.",
-                        "visited": "\n\nThe stomachs of people and soldiers gurgle from drinking water. There are enough healing procedures for today."
+                        "visited": "\n\nThe stomachs of people and soldiers gurgle from drinking water. There are enough healing procedures for today.",
+                        "effectDesc": "Mineral Spring +1"
                     }
                 },
                 "5": {
@@ -151,7 +153,10 @@
                     },
                     "properties": [
                         "AVXjnkmn.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 000000010 144 7 0 0"
-                    ]
+                    ],
+                    "text": {
+                        "scrollsNotAllowed": "Do kindly keep the papers. I don't trade in scrap parchment."
+                    }
                 },
                 "11": {
                     "zone": 1,
