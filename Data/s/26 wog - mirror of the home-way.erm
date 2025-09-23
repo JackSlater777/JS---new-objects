@@ -1,0 +1,14 @@
+ZVSE2
+
+
+!#DC(WOG_OPT_MIRROR_HOME_WAY) = 52;
+
+
+!?FU(OnAfterErmInstructions);
+!!UN:P(WOG_OPT_MIRROR_HOME_WAY)/?(wogOption:y);
+!!FU&(wogOption)<>(TRUE):E;
+
+!!SN:T^wog.52.objName^/?(objName:z);
+!!SN:H^object^/(OBJ_NEW_WOG_OBJECTS)/66/(objName);
+
+** End of Script **

@@ -1,3 +1,9 @@
+Version 1.28 (23.09.2025)
+- moved Town Gate (wog name - mirror of the home-way) logic into the plugin
+- added a logic for AI to interact with Town Gate
+- added a new object - Warlock's Laboratory
+
+
 Version 1.24e (21.09.2025)
 - added custom description for bonuses/penalties to morale/luck for visiting mineral spring and grave
 

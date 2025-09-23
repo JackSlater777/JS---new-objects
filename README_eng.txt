@@ -1,20 +1,24 @@
 As you already know, daemon_n released a great plugin for customizing objects - RMG_CustomizeObjectProperties, also adding new types of objects to the basic WoG mod, such as warehouses/gazebo/magic coliseum. I decided to expand this list with the following objects:
 
-- grave
+
+- hill fort (type 1 - does not allow upgrading creatures above level 5)
 - temple of loyalty
 - skeleton transformer
 - watering place
 - mineral spring
 - hermit's shack
 - junkman
+- warlock's lab
 - trailblazer
 - ancient lamp
 - observatory (including ground)
-- hill fort (type 1 - does not allow upgrading creatures above level 5)
+- grave
+
 
 Also added a new type of object, not found in other HoMM3 mods and add-ons, but existing in HoMM4:
 
 - dream teacher
+
 
 For all objects, except for the skeleton transformer and junkman, the logic for the AI ​​is written.
 Generation of any object can be customized via RMG dialog in the game or via json file in the /Lang folder.

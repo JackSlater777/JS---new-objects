@@ -158,6 +158,27 @@
                         "scrollsNotAllowed": "Do kindly keep the papers. I don't trade in scrap parchment."
                     }
                 },
+                "9": {
+                    "zone": 1,
+                    "value": 10000,
+                    "density": 100,
+                    "name": "Warlock's Lab",
+                    "text": {
+                        "dlgHint": "Resources can be turned into each other, but only rare ones. If you want something transmuted, click on the initial and desired resources.",
+                        "dlgHintDeal": "Transmute: get %d %s %s from %d %s %s.",
+                        "dlgHintDealDone": "The process was successful; here are your new resources. Anything else you need transmuted?",
+                        "dlgHintAvalObjs": "Resources for transmutation",
+                        "dlgHintButtonDeal": "Transmute"
+                    },
+                    "sound": {
+                        "enter": "STORE.wav",
+                        "loop": "LOOPELAL.wav"
+                    },
+                    "properties": [
+                        "avxtrmtw.def 100111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 001000000 144 9 0 0",
+                        "avxtrmts.def 100111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 000001000 144 9 0 0"
+                    ]
+                },
                 "11": {
                     "zone": 1,
                     "value": 200,
@@ -236,20 +257,6 @@
                         "visit": "\n\nThe drilling foreman rolls out a cart with valuables. \"We sold the mined goods profitably. I hope next time it will be no less - come for your share in a week\".",
                         "visited": "\n\nThe drilling foreman is very busy, and from his grumbling you understand that he has nothing to please you with at the moment. We'll have to stop by next week."
                     }
-                },
-                "9": {
-                    "zone": 1,
-                    "value": 10000,
-                    "density": 100,
-                    "name": "Warlock's Lab",
-                    "sound": {
-                        "enter": "STORE.wav",
-                        "loop": "LOOPELAL.wav"
-                    },
-                    "properties": [
-                        "avxtrmtw.def 100111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 001000000 144 9 0 0",
-                        "avxtrmts.def 100111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 000001000 144 9 0 0"
-                    ]
                 },
                 "10": {
                     "zone": 4,
