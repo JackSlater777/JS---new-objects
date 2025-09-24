@@ -1,3 +1,7 @@
+Version 1.28a (24.09.2025)
+- fixed a game crush when AI calculated the best town to teleport into using Town Gate
+
+
 Version 1.28 (23.09.2025)
 - moved Town Gate (wog name - mirror of the home-way) logic into the plugin
 - added a logic for AI to interact with Town Gate
