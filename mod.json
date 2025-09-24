@@ -1,6 +1,6 @@
 {
 	"caption": {
-		"en_US": "JS - new objects v.1.28a",
+		"en_US": "JS - new objects v.1.28b",
 		"ru_RU": ""
 	},
 	"description": {
@@ -19,7 +19,7 @@
 		"file": "jsobj.ico",
 		"index": 0
 	},
-	"mod_version": "1.28a",
+	"mod_version": "1.28b",
 	"priority": 2,
 	"compatibility": {
 		"class": "default",
