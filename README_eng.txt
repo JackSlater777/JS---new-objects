@@ -9,6 +9,7 @@ As you already know, daemon_n released a great plugin for customizing objects - 
 - hermit's shack
 - junkman
 - warlock's lab
+- prospector
 - trailblazer
 - ancient lamp
 - observatory (including ground)
@@ -20,7 +21,7 @@ Also added a new type of object, not found in other HoMM3 mods and add-ons, but 
 - dream teacher
 
 
-For all objects, except for the skeleton transformer and junkman, the logic for the AI ​​is written.
+For all objects, except for the skeleton transformer, junkman and warlock's lab, the logic for the AI ​​is written.
 Generation of any object can be customized via RMG dialog in the game or via json file in the /Lang folder.
 
 I will be glad to any suggestions for new objects or bug reports.

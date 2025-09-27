@@ -1,5 +1,10 @@
-Version 1.28a (24.09.2025)
+Version 1.28c (27.09.2025)
 - fixed a game crush when AI calculated the best town to teleport into using Town Gate
+- added prospector - it works like a mystical garden but instead of giving 5 gems it gives 5 sulfur (or 500 gold)
+- prospector can be captured if option 879 (capture mills and gardens) is active
+- TODO: add prospector to the object list in sorcery capturing
+- added extra hints for almost every new object; in order to get a new hint a player should visit an object at least once
+- added extra hints to stables and refugee camp
 
 
 Version 1.28 (23.09.2025)

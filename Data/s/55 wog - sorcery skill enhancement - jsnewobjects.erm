@@ -1,6 +1,10 @@
 ZVSE2
 
 
+// todo: add prospector
+
+
+
 !?FU(WOG_23_MainProcedure);  [Start of Function 5000 - get coordinates and object type/subtype] [and control word at the right-click location]
 !#VA(x:x) (y:x) (z:x) (heroId:x) (sorceryLevel:x);
 

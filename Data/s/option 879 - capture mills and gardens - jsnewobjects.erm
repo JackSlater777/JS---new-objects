@@ -1,0 +1,202 @@
+ZVSE2
+
+
+!?FU(OnGameEnter);
+!!UN:P879/?(isCaptureObjOpt:y);
+
+!!if&(isCaptureObjOpt);
+  
+  // replace defs
+  // имя папки (дефа) замены допускает до 12 символов!
+  // кадры из defa пересохраняются с помощью paint из bmp в png
+  // имя - номер кадра в формате 0_i.png
+
+  //replace prospectors
+  !!re i/0/41;(end_value);
+    !!SN:R^avtprosp.def:0_%i.png^/^Data\Defs\ESprosp0.def\0_%i.png^;
+  !!en;
+!!en;
+
+!?FU(ES_OnMapItem_Draw);
+!!UN:Cx1/(STRUCT_HOOK_CONTEXT_EDI)/4/?(mapitem:y) C(mapitem:y)/56/4/?(objType:y) C(mapitem:y)/60/4/?(objSubtype:y);
+
+!!if&(objType)=(ES_OBJ_HOTA_ACTIVE)/(objSubtype)=(ES_OBJ_SUBTYPE_PROSPECTOR);
+  !!UN:C6916676/4/?(noShowObjectcts:y);
+
+  !!if&(noShowObjectcts)=0;
+    !!VRi^ES_879_DrawObjectType^:S(objType);
+    !!SN:X?t/0;
+    !!UN:Cx1/(STRUCT_HOOK_CONTEXT_RET)/4/4263617;
+  !!en; 
+!!en;
+
+!?FU(ES_OnPlayerVisitObject)&i^ES_879_isAuto^=(FALSE); [4A81A4]
+!!UN:Cx1/(STRUCT_HOOK_CONTEXT_EDI)/4/?(mapitem:y) C(mapitem:y)/30/2/?(objType:y) C(mapitem:y)/34/2/?(objSubtype:y); // 1E 22
+
+!!if&(objType)=(ES_OBJ_HOTA_ACTIVE)/(objSubtype)=(ES_OBJ_SUBTYPE_PROSPECTOR);
+  
+  !!UN:Cx1/(STRUCT_HOOK_CONTEXT_EBP)/(UNC_INT)/?(ebp:y) C(ebp)/16/(UNC_INT)/?(packedCoords:y);
+  !!FU(ES_UnPackedCoords):P?(x:y)/?(y:y)/?(z:y)/(packedCoords);
+  
+  !!PO(x)/(y)/(z):O?(oldOwner:y);
+
+  !!VR(ownerChanged:y):S(FALSE);
+
+  !!if&(oldOwner)=(NO_OWNER);
+    !!PO(x)/(y)/(z):V0/0 V1/0;          [res type and num]
+    !!VR(ownerChanged):S(TRUE);
+  !!el;
+    !!OW:T(oldOwner)/?(team:y) Ti^timerOwner^/?(newTeam:y);
+
+    !!if&(team)<>(newTeam);
+      !!PO(x)/(y)/(z):V0/0 V1/0;        [res type and num]
+      !!VR(ownerChanged):S(TRUE);
+    !!en;
+  !!en;
+
+  !!if&(ownerChanged);
+    !!IP:D(ANY_PLAYER);
+    !!FU(ES_879_MP_SetObjectOwner):D(x)/(y)/(z)/i^timerOwner^ P(x)/(y)/(z)/i^timerOwner^;
+  !!en;
+
+!!en;
+
+!?FU(ES_879_CollectResources);
+
+  !!FU(NewIntArray):P8/?(liveArr:y); 
+  !!re (playerID:y)/0/(PLAYER_LAST);
+    !!OW:I(playerID)/d/?(isDead:y);
+    !!SN&(isDead)=(FALSE):V(liveArr)/(playerID)/(TRUE);
+  !!en;
+
+  !!re i/0/(HERO_LAST_WOG);
+    !!HEi:O?(owner:y);
+
+    !!if&(owner)=(NO_OWNER);
+      !!HEi:Z?(hero:y);
+      !!br;
+    !!en;
+  !!en;
+
+  !!VRi^ES_879_isAuto^:S(TRUE);
+   !!FU(ES_879_IterateObjectsSub):P(ES_OBJ_HOTA_ACTIVE)/(ES_OBJ_SUBTYPE_PROSPECTOR)/(hero)/(liveArr);
+  !!UN:C(hero)/34/1/(NO_OWNER);
+  !!VRi^ES_879_isAuto^:S(FALSE);
+
+!?FU(ES_879_IterateObjectsSub);
+!#VA(objType:x) (objSubtype:x) (hero:x) (liveArr:x);
+!#VA(x:y) (y:y) (z:y); 
+
+!!VR(x):S-1;                            [init as start]
+!!UN:C(ADV_MANAGER)/4/?(advMgr:y);
+!!re i;                                 [endless loop]
+  !!UN:U(objType)/(objSubtype)/-1/(x)/(y)/(z); 
+  !!br&(x)<0;                           [exit loop if nothing found]
+
+  !!PO(x)/(y)/(z):O?(owner:y);          [get obj owner]
+
+  !!if&(owner)<>(NO_OWNER);             [if there is one]
+    !!SN:V(liveArr)/(owner)/?(isAlive:y);[check if lives]
+
+    !!if&(isAlive);
+      !!UN:C(hero)/34/1/(owner);        [set hero as obj owner color]
+      !!OB(x)/(y)/(z):T?(heroCheck:y);
+
+      !!if&(heroCheck)=(OBJ_HERO);
+        !!FU(ES_AdvMgr_HideHero):P(x)/(y)/(z); [hide hero if it is there]
+      !!en;
+
+      !!FU(ES_879_AdjustStoredResSub):P(x)/(y)/(z)/(objType)/(objSubtype);
+      !!FU(ES_879_AdvMgr_HeroEnterObjectAsAi):P(x)/(y)/(z)/(hero);
+
+    !!el;
+      !!PO(x)/(y)/(z):O(NO_OWNER) V0/0 V1/0; [set no owner if is dead]
+      !!FU(ES_879_MP_SetObjectOwner):P(x)/(y)/(z)/(NO_OWNER);
+    !!en;
+  !!en;
+!!en;
+
+!?FU(ES_879_AdjustStoredResSub);
+!#VA(x:x) (y:x) (z:x) (objType:x) (objSubtype:x); 
+
+!!if&(objType)=(ES_OBJ_HOTA_ACTIVE)/(objSubtype)=(ES_OBJ_SUBTYPE_PROSPECTOR);
+  !!OB(x)/(y)/(z):C?(cWord:y);
+  !!VR(resType:y):S(cWord) &(BITS_5_MASK);
+  !!VR(value:y):S(cWord) Sd>>13 &(BITS_10_MASK);
+
+  !!if&(resType)=(RES_MITHRIL);         [replace resType with gold if there is no mithril]
+    !!UN:B0/?(mithrilEnabled:y);
+    !!if&(mithrilEnabled)=(FALSE);
+      !!VR(resType):S(RES_GOLD);
+    !!en;
+  !!en;
+
+  *!if&(resType)=(RES_GOLD);
+    *!VR(value):*500;
+  *!en;
+!!en;
+
+!!PO(x)/(y)/(z):V0/(resType) V1/(value);
+
+!?FU(ES_HOOK_OnObjectHintGetType);
+!!UN:Cx1/(STRUCT_HOOK_CONTEXT_EBX)/4/?(ebx:y) C(ebx)/30/2/?t C(ebx)/34/2/?s;
+
+!!if&t=(ES_OBJ_HOTA_ACTIVE)/s=(ES_OBJ_SUBTYPE_PROSPECTOR);
+  !!VRi^es_879_hint_object_type^:St;
+!!en;
+
+
+!?FU(ES_HOOK_OnObjectRmcHintGetType);
+!!UN:Cx1/(STRUCT_HOOK_CONTEXT_EBX)/4/?(mapItem:y);
+
+!!if&(mapItem)>(BIT_16);
+  !!UN:C(mapItem:y)/30/2/?t C(mapItem:y)/34/2/?s;
+
+  !!if&t=(ES_OBJ_HOTA_ACTIVE)/s=(ES_OBJ_SUBTYPE_PROSPECTOR);
+    !!VRi^es_879_rmc_hint_object_type^:St;
+  !!en;
+!!en;
+
+; Reveal the area for owners every day (in case it's covered by Cover of Darkness)
+; Warning: must not use OnEveryDay and UN:S as they don't work exactly the same as native behaviours
+!?FU(ES_OnNewDay);
+!!UN:P879/?(wogOption:y);
+!!FU&(wogOption)<>(TRUE):E;
+
+!!UN:C(GAME_MANAGER)/4/?(gameMgr:y);
+
+; get size of the map
+!!UN:X?(mapSize:y)/?(hasUnderground:y); 
+; pass once through all cells of the map
+!!re l/0/(hasUnderground)/1;            [coord z]
+  !!re k/0/(mapSize)/1/-1;              [coord y]
+    !!re i/0/(mapSize)/1/-1;            [coord x]
+      !!OBi/k/l:T?(objType:y) U?(objSubtype:y);
+
+      !!if&(objType)=(ES_OBJ_HOTA_ACTIVE)/(objSubtype)=(ES_OBJ_SUBTYPE_PROSPECTOR);
+        !!TRi/k/l:E?(isYellowSquare:y); 
+        !!VR(isYellowSquare):X(TRUE);   [reverse param isYellowSquare]
+
+        !!if&(isYellowSquare);
+          !!FU(ES_AdvMgr_GetMapItem):Pi/k/l/?(mapItem:y);
+          !!POi/k/l:O?(owner:y);
+          !!SN:E4836816/(CALLCONV_THISCALL)/(gameMgr)/i/k/l/(owner)/3/0;
+        !!en;
+      !!en;
+    !!en;
+  !!en;
+!!en;
+
+; Reveal the area when an object is captured with Sorcery I (WoG Scripts)
+!?FU(WOG_23_OnAfterEnterObjectSub);
+!#VA(x:x) (y:x) (z:x);
+!#VA(objType:x) (objSubtype:x);
+!#VA(owner:x);
+!!UN:P879/?(isCaptureObjOpt:y);
+
+!!if&(isCaptureObjOpt);
+  !!if&(objType)=(ES_OBJ_HOTA_ACTIVE)/(objSubtype)=(ES_OBJ_SUBTYPE_PROSPECTOR);
+    !!UN:C(GAME_MANAGER)/4/?(gameMgr:y);
+    !!SN:E4836816/(CALLCONV_THISCALL)/(gameMgr)/(x)/(y)/(z)/(owner)/3/0;
+  !!en;
+!!en;

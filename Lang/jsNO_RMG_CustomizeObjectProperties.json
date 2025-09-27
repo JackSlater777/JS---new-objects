@@ -19,6 +19,20 @@
                     ]
                 }
             },
+            "78": {
+                "-1": {
+                    "text": {
+                        "hint": "(Available creatures: %s - {%d})"
+                    }
+                }
+            },
+            "94": {
+                "0": {
+                    "text": {
+                        "hint": "(+%d movement points until the end of the week and Cavalier upgrade)"
+                    }
+                }
+            },
             "141": {
                 "0": {
                     "map": 32,
@@ -53,6 +67,116 @@
                     }
                 }
             },
+            "142": {
+				"text": {
+					"visit": "\n\nThe warehouse keeper announces: \"My lord, I have worked hard to provide you with these resources, and come back for the next batch next week\".",
+					"visited": "\n\nThe warehouse owner apologizes: \"Unfortunately, Milord, there are no resources at the moment, come back next week\"."
+				},
+				"0": {
+					"name": "Warehouse of Wood",
+					"sound": {
+						"enter": "WERHOUSE.wav",
+						"loop": "WRHSWOOD.wav"
+					},
+					"properties": [
+						"avwrhswd.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011111111 142 0 0 0"
+					],
+					"zone": 1,
+					"density": 30,
+					"value": 2250
+				},
+				"1": {
+					"name": "Warehouse of Mercury",
+					"sound": {
+						"enter": "WERHOUSE.wav",
+						"loop": "WRHSMERC.wav"
+					},
+					"properties": [
+						"avwrhsmc.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011111111 142 1 0 0"
+					],
+					"zone": 1,
+					"density": 30,
+					"value": 2500
+				},
+				"2": {
+					"name": "Warehouse of Ore",
+					"sound": {
+						"enter": "WERHOUSE.wav",
+						"loop": "WRHSOREM.wav"
+					},
+					"properties": [
+						"avwrhsor.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011111111 142 2 0 0"
+					],
+					"zone": 1,
+					"density": 30,
+					"value": 2250
+				},
+				"3": {
+					"name": "Warehouse of Sulfur",
+					"sound": {
+						"enter": "WERHOUSE.wav",
+						"loop": "WRHSSULF.wav"
+					},
+					"properties": [
+						"avwrhssf.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011111111 142 3 0 0"
+					],
+					"zone": 1,
+					"density": 30,
+					"value": 2500
+				},
+				"4": {
+					"name": "Warehouse of Crystal",
+					"sound": {
+						"enter": "WERHOUSE.wav",
+						"loop": "WRHSCRST.wav"
+					},
+					"properties": [
+						"avwrhscr.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011111111 142 4 0 0"
+					],
+					"zone": 1,
+					"density": 30,
+					"value": 2500
+				},
+				"5": {
+					"name": "Warehouse of Gem",
+					"sound": {
+						"enter": "WERHOUSE.wav",
+						"loop": "WRHSGEMS.wav"
+					},
+					"properties": [
+						"avwrhsgm.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011111111 142 5 0 0"
+					],
+					"zone": 1,
+					"density": 30,
+					"value": 2500
+				},
+				"6": {
+					"name": "Warehouse of Gold",
+					"sound": {
+						"enter": "WERHOUSE.wav",
+						"loop": "WRHSGOLD.wav"
+					},
+					"properties": [
+						"avwrhsgl.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011111111 142 6 0 0"
+					],
+					"zone": 1,
+					"density": 30,
+					"value": 6000
+				},
+				"7": {
+					"name": "Warehouse of Mithril",
+					"sound": {
+						"enter": "WERHOUSE.wav",
+						"loop": "WRHSCRST.wav"
+					},
+					"properties": [
+						"avwrhsmt.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011111111 142 7 0 0"
+					],
+					"zone": 1,
+					"density": 30,
+					"value": 6000
+				}
+			},
             "144": {
                 "0": {
                     "zone": 1,
@@ -85,6 +209,24 @@
                         "AVXsktrs.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 001000000 144 1 0 0"
                     ]
                 },
+                "2": {
+					"map": 32,
+					"value": 3000,
+					"density": 50,
+					"name": "Colosseum of the Magi",
+					"sound": {
+						"enter": "GAZEBO.wav",
+						"loop": "IVORTWLO.wav"
+					},
+					"properties": [
+						"AVSmgarn.def 000111110001111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 011111111 144 2 0 0"
+					],
+					"text": {
+						"hint": "(+2 to magic power or knowledge once per hero)",
+						"visit": "\n\nThere are exhibition performances at the Colosseum today. You enter the arena and delight the audience with a demonstration of your magical talents. As a prize, you are offered one of the newest teaching aids - a true magician must keep up with the achievements of science.",
+						"visited": "\n\nThe manager of the Colosseum, recognizing you, bows, but is in no hurry to let you into the arena. \"Your place is not among the candidates, but in the judges' box!\""
+					}
+				},
                 "3": {
                     "zone": 1,
                     "value": 500,
@@ -142,6 +284,26 @@
                         "visited": "\n\nEntering the shack, you discover that no repairs have been made since your last visit, and the walls are still covered with the same familiar manuscripts."
                     }
                 },
+                "6": {
+					"map": 32,
+					"zone": 2,
+					"density": 50,
+					"value": 1500,
+					"name": "Gazebo",
+					"sound": {
+						"enter": "GAZEBO.wav",
+						"loop": ""
+					},
+					"properties": [
+						"AVXgazeb.def 101111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 011111111 144 6 0 0"
+					],
+					"text": {
+                        "hint": "(+2000 exp once for each hero for 1000 gold)",
+						"cannotVisit": "\n\nAn elderly knight emerges from the gazebo. \"I will teach you everything I know, it will help you in your travels. However, I will note that a small donation to the League of Knights in Retirement will be required. If you scrape together a thousand coins, come.\"",
+						"visit": "\n\nAn elderly knight emerges from the gazebo. \"I will teach you everything I know, it will help you in your travels. However, I will note that a small donation to the League of Knights in Retirement will be required. A thousand coins will be enough.\"",
+						"visited": "\n\nA mighty snore can be heard from the gazebo. Apparently, the League has already put your donation to good use."
+					}
+				},
                 "7": {
                     "zone": 1,
                     "value": 200,
@@ -179,6 +341,23 @@
                         "avxtrmts.def 100111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 000001000 144 9 0 0"
                     ]
                 },
+                "10": {
+                    "zone": 4,
+                    "value": 500,
+                    "density": 30,
+                    "name": "Prospector",
+                    "sound": {
+                        "enter": "LUCK.wav",
+                        "loop": "LOOPPROS.wav"
+                    },
+                    "properties": [
+                        "avtprosp.def 000111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 001000000 144 10 0 0"
+                    ],
+                    "text": {
+                        "visit": "\n\nThe tired prospector looks at you defiantly, but it is clear that he is still afraid of you. For permission to continue mining in this place, he is ready to pay you a small amount regularly.",
+                        "visited": "\n\nThe prospector alternately swears at the exhausted vein, then laments and begs. Apparently, nothing more can be obtained from him this week."
+                    }
+                },
                 "11": {
                     "zone": 1,
                     "value": 200,
@@ -192,7 +371,7 @@
                         "avstrblz.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 000100000 144 11 0 0"
                     ],
                     "text": {
-                        "hint": "(Reduces the cost of a normal step in the wasteland to 75 units until the end of the week)",
+                        "hint": "(Reduces the cost of a normal step in the rough terrain to 75 units until the end of the week)",
                         "visit": "\n\n\"I know these wastelands like the back of my hand. Even if I haven't been somewhere yet, I'll figure out how to find my way. I can probably go with you for a week if you need a guide,\" says the inhabitant of this tent.",
                         "visited": "\n\n\"Hey, this is my tent. Mind you, it's not my fault we're walking in circles,\" the guide shakes his head."
                     }
@@ -208,8 +387,7 @@
                         "loop": ""
                     },
                     "properties": [
-                        "avtglam1.def 101111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 000001000 145 0 0 0",
-                        "avtglam2.def 101111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 000000010 145 0 0 0"
+                        "avtglam1.def 101111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 000001000 145 0 0 0"
                     ],
                     "text": {
                         "hint": "(Available creatures: %s - {%d})",
@@ -257,23 +435,16 @@
                         "visit": "\n\nThe drilling foreman rolls out a cart with valuables. \"We sold the mined goods profitably. I hope next time it will be no less - come for your share in a week\".",
                         "visited": "\n\nThe drilling foreman is very busy, and from his grumbling you understand that he has nothing to please you with at the moment. We'll have to stop by next week."
                     }
-                },
-                "10": {
-                    "zone": 4,
-                    "value": 500,
-                    "density": 30,
-                    "name": "Prospector",
-                    "sound": {
-                        "enter": "LUCK.wav",
-                        "loop": "LOOPPROS.wav"
-                    },
+                }
+            }
+        },
+        "backup": {
+            "145": {
+                "0": {
+                    "name": "Ancient Lamp",
                     "properties": [
-                        "avtprosp.def 000111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 001000010 144 10 0 0"
-                    ],
-                    "text": {
-                        "visit": "\n\nThe tired prospector looks at you defiantly, but it is clear that he is still afraid of you. For permission to continue mining in this place, he is ready to pay you a small amount regularly.",
-                        "visited": "\n\nThe prospector alternately swears at the exhausted vein, then laments and begs. Apparently, nothing more can be obtained from him this week."
-                    }
+                        "avtglam2.def 101111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 000000010 145 0 0 0"
+                    ]
                 }
             }
         }
