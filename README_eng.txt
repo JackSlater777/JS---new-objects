@@ -16,7 +16,7 @@ As you already know, daemon_n released a great plugin for customizing objects - 
 - grave
 
 
-Also added a new type of object, not found in other HoMM3 mods and add-ons, but existing in HoMM4:
+Added a new type of object, not found in other HoMM3 mods and add-ons, but existing in HoMM4:
 
 - dream teacher
 
@@ -24,12 +24,21 @@ Also added a new type of object, not found in other HoMM3 mods and add-ons, but 
 For all objects, except for the skeleton transformer, junkman and warlock's lab, the logic for the AI ​​is written.
 Generation of any object can be customized via RMG dialog in the game or via json file in the /Lang folder.
 
-I will be glad to any suggestions for new objects or bug reports.
 
-Installation:
-- unzip the archive into the /mods folder
+Added new graphics for already existing objects:
 
-The author is not responsible for compatibility with other mods.
+- AVSutop5.def – Dragon Utopia for swamp terrain
+- AVSutop8.def – Dragon Utopia for lava terrain
+- AVXfyth7.def – Fountain of Youth for underground terrain
+- AVTmystd.def – Mystic Garden for mud terrain
+- AVXstbl7.def – Stables for lava and underground terrain
+- AVXtrek2.def – Tree of Wisdom for sand terrain
+- AVXtrek5.def – Tree of Wisdom for swamp terrain
+- AVXtrek3.def – Tree of Wisdom for rocky terrain (taken from WoG base build)
+- AVXtrek7.def – Tree of Wisdom for lava and underground terrain
+- HAExit01.def – Gates of the Underworld for underground terrain
+- avmoilpm.def – Water Wheel for underground terrain
+
 
 Thanks:
 - HotA Crew - for the ideas and graphics
