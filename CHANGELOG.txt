@@ -1,3 +1,7 @@
+Version 1.28f (03.05.2026)
+- updated core RMG plugin
+
+
 Version 1.28e (07.10.2025)
 - added missing .gitattributes file
 
