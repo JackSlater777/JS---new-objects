@@ -1,3 +1,7 @@
+Version 1.30 (20.05.2026)
+- fixed Lvl 4 shrine missing hint
+
+
 Version 1.28f (03.05.2026)
 - updated core RMG plugin
 

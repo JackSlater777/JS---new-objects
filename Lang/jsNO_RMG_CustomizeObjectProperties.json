@@ -68,7 +68,9 @@
                     "zone": 1,
                     "value": 7000,
                     "name": "Shrine of Magic Mystery",
-                    "hint": "(Learn 4th level spell)",
+                    "text": {
+                        "hint": "(Learn 4th level spell)"
+                    },
                     "properties": [
                         "4lvlshrn.def 011111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011111111 88 3 0 0"
                     ]
