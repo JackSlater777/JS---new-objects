@@ -1,3 +1,7 @@
+Version 1.31 (25.06.2026)
+- added 3 new types of seer huts
+
+
 Version 1.30 (20.05.2026)
 - fixed Lvl 4 shrine missing hint
 
