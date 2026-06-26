@@ -1,6 +1,6 @@
 {
 	"caption": {
-		"en_US": "JS - new objects v.1.31",
+		"en_US": "JS - new objects v.1.32",
 		"ru_RU": ""
 	},
 	"description": {
@@ -16,10 +16,10 @@
 	"author": "JackSlater",
 	"homepage": "",
 	"icon": {
-		"file": "jsobj.ico",
+		"file": "js - new objects.png",
 		"index": 0
 	},
-	"mod_version": "1.31",
+	"mod_version": "1.32",
 	"priority": 2,
 	"compatibility": {
 		"class": "default",
