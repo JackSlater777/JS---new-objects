@@ -1,3 +1,9 @@
+Version 1.33 (09.07.2026)
+- added Trees of Knowledge for rough and dirt terrains, all credits for graphics to Grossmaestro
+- added Ruins - a HotA creature bank
+- sync with main version
+
+
 Version 1.31 (25.06.2026)
 - added 3 new types of seer huts
 

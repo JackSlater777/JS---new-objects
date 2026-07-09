@@ -1,0 +1,84 @@
+{
+    "RMG": {
+        "objectGeneration": {
+            "16": {
+                "32": {
+                    "enabled": true,
+                    "zone": 6,
+                    "density": 100,
+                    "value": 1000,
+                    "name": "Ruins",
+                    "properties": [
+                        "AVXruins.def 000111111011111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 000000100 16 32 0 0"
+                    ],
+                    "sound": {
+                        "enter": "RUINSVIS.wav",
+                        "loop": "LOOPRUIN.wav"
+                    },
+                    "text": {
+                        "visit": "The crumbling towers and walls echo with the distinct sound of bone rattling and an otherworldly howl. Want to explore the ruins?",
+                        "victory": "Climbing over a pile of bones to the highest remaining tower, you discover a pile of ancient coins at the top. Furthermore, from this vantage point, you get your bearings.",
+                        "plundered": "The wind whistles whimsically through the ruins, but there's nothing else of interest here. Perhaps you can explore the surrounding area by climbing the tower."
+                    },
+                    "states": [
+                        {
+                            "artifactTypeCounts": [0, 0, 0, 0],
+                            "chance": 30,
+                            "creatureRewardCount": 0,
+                            "creatureRewardType": -1,
+                            "guardians": {
+                                "count": [20, 3, 3, 10, 1, 0, 0],
+                                "type": [56, 60, 61, 57, 65, -1, -1]
+                            },
+                            "resources": [0, 0, 0, 0, 0, 0, 1000],
+                            "upgrade": 0,
+                            "revealRadius": 12
+                        },
+                        {
+                            "artifactTypeCounts": [0, 0, 0, 0],
+                            "chance": 30,
+                            "creatureRewardCount": 0,
+                            "creatureRewardType": -1,
+                            "guardians": {
+                                "count": [30, 5, 5, 10, 1, 0, 0],
+                                "type": [56, 60, 61, 57, 65, -1, -1]
+                            },
+                            "resources": [0, 0, 0, 0, 0, 0, 2000],
+                            "upgrade": 0,
+                            "revealRadius": 12
+                        },
+                        {
+                            "artifactTypeCounts": [0, 0, 0, 0],
+                            "chance": 30,
+                            "creatureRewardCount": 0,
+                            "creatureRewardType": -1,
+                            "guardians": {
+                                "count": [40, 7, 7, 20, 2, 0, 0],
+                                "type": [56, 60, 61, 57, 65, -1, -1]
+                            },
+                            "resources": [0, 0, 0, 0, 0, 0, 3000],
+                            "upgrade": 0,
+                            "revealRadius": 12
+                        },
+                        {
+                            "artifactTypeCounts": [0, 0, 0, 0],
+                            "chance": 10,
+                            "creatureRewardCount": 0,
+                            "creatureRewardType": -1,
+                            "guardians": {
+                                "count": [50, 9, 9, 20, 3, 0, 0],
+                                "type": [56, 60, 61, 57, 65, -1, -1]
+                            },
+                            "resources": [0, 0, 0, 0, 0, 0, 4000],
+                            "upgrade": 0,
+                            "revealRadius": 12
+                        }
+                    ],
+                    "troopPlacement": {
+                        "defenders": ["15", "185", "172", "02", "08"]
+                    }
+                }
+            }
+        }
+    }
+}

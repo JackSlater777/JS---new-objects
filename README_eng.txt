@@ -34,7 +34,7 @@ Added new graphics for already existing objects:
 - AVXstbl7.def – Stables for lava and underground terrain
 - AVXtrek2.def – Tree of Wisdom for sand terrain
 - AVXtrek5.def – Tree of Wisdom for swamp terrain
-- AVXtrek3.def – Tree of Wisdom for rocky terrain (taken from WoG base build)
+- AVXtrek3.def – Tree of Wisdom for rocky terrain
 - AVXtrek7.def – Tree of Wisdom for lava and underground terrain
 - HAExit01.def – Gates of the Underworld for underground terrain
 - avmoilpm.def – Water Wheel for underground terrain
