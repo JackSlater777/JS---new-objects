@@ -1,3 +1,12 @@
+Version 1.34 (11.07.2026)
+- most of the water objects now have unvisitable yellow trigger tile
+- added fountain of youth for water terrains
+- added CB Pirate Cavern, it's disabled in rmg by default
+- added CB Temple of the Sea
+- added Sea Barrel
+- added Jetsam
+
+
 Version 1.33 (09.07.2026)
 - added Trees of Knowledge for rough and dirt terrains, all credits for graphics to Grossmaestro
 - added Ruins - a HotA creature bank
