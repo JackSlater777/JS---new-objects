@@ -1,3 +1,16 @@
+Version 1.35 (18.07.2026)
+- added Vial of Mana
+- added Seafaring Academy
+- added Altar of Mana
+- added water Tavern
+- added water Prison
+- improved mouse hover hint for universities - now it shows skills you can learn there
+- massive refactoring
+- added 144 type objects to the RMG dialog
+- Town Gate is moved to type 146 subtype 3
+- Hermit Shack - added a new message if hero does not have free skill slot, and all skills are expert lvl
+
+
 Version 1.34 (11.07.2026)
 - most of the water objects now have unvisitable yellow trigger tile
 - added fountain of youth for water terrains

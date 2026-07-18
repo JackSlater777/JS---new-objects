@@ -27,6 +27,7 @@ It's an extension of daemon_n's plugin - RMG_CustomizeObjectProperties - that ad
 141 object type:
 - Dream Teacher (subtype 0)
 - Grave (subtype 1)
+- Land Observatory (subtype 2)
 
 
 142 object type:
@@ -52,12 +53,13 @@ It's an extension of daemon_n's plugin - RMG_CustomizeObjectProperties - that ad
 - Ancient Lamp (subtype 0)
 - Sea Barrel (subtype 1)
 - Jetsam (subtype 2)
+- Vial of Mana (subtype 3)
 
 
 146 object type:
+- Seafaring Academy (subtype 0)
 - Observatory (subtype 1)
-
-
+- Altar of Mana (subtype 2)
 
 
 

@@ -7,6 +7,7 @@
         "js - new objects": {
             "properties.0": [
                 "WTschm0.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 100000000 000000000 47 0 0 0",
+                "WaterOb.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 100000000 000000000 58 0 0 0",
                 "Watersp1.def 101111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 100000000 000000000 88 0 0 0",
                 "Watersp2.def 101111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 100000000 000000000 89 0 0 0",
                 "Watersp3.def 101111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 100000000 000000000 90 0 0 0",
@@ -29,6 +30,10 @@
                 "AVTmyst0.def 000111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 000010100 55 0 0 0",
                 "AVTmystd.def 000111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 000000001 55 0 0 0",
 
+                "avwtobtw.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 100000000 58 0 0 0",
+
+                "avwtprsn.def 000111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 100000000 62 0 0 0",
+
                 "AVXseee0.def 101111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 011111111 83 0 0 0",
                 "AVXsees0.def 101111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 011111111 83 0 0 0",
                 "AVXseec0.def 101111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 011111111 83 0 0 0",
@@ -38,6 +43,8 @@
                 "AVXl3sh0w.def 011111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 100000000 90 0 0 0",
 
                 "AVXstbl7.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011000000 94 0 0 0",
+
+                "wt_tvrn01.def 000111110001111111111111111111111111111111111111 001000000000000000000000000000000000000000000000 111111111 100000000 95 0 0 0",
 
                 "AVXtrek2.def 101111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 000000010 102 0 0 0",
                 "AVXtrek4.def 101111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 000000001 102 0 0 0",
@@ -87,6 +94,13 @@
             },
             "52": {
                 "map": 5
+            },
+            "62": {
+                "0": {
+                    "text": {
+                        "noAvalBoats": "On the road you meet a hero encamped here. The hero wishes to join you, but unfortunately not a single available boat was around."
+                    }
+                }
             },
             "78": {
                 "-1": {
@@ -138,6 +152,11 @@
 					"zone": 1
 				}
 			},
+            "92": {
+                "0": {
+                    "map": 5
+                }
+            },
             "94": {
                 "0": {
                     "text": {
@@ -174,8 +193,27 @@
                     ],
                     "text": {
                         "visit": "\n\nThis grave is fresh, and no one has even had time to take away the shovel that was used to dig it. It will take a whole day of excavation to get to the treasure.",
-                        "visited": "\n\nThis grave is fresh, and no one has even had time to take away the shovel that was used to dig it. Using it and tying a handkerchief around your nose, you extract something valuable from the earth.",
+                        "dig": "\n\nThis grave is fresh, and no one has even had time to take away the shovel that was used to dig it. Using it and tying a handkerchief around your nose, you extract something valuable from the earth.",
                         "effectDesc": "Grave Digging -3"
+                    }
+                },
+                "2": {
+                    "enabled": false,
+                    "zone": 1,
+                    "value": 500,
+                    "density": 20,
+                    "name": "Observatory",
+                    "sound": {
+                        "enter": "LIGHTHOUSE.wav",
+                        "loop": ""
+                    },
+                    "properties": [
+                        "avxobsv1.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011111111 141 2 0 0"
+                    ],
+                    "text": {
+                        "hint": "(+2 to vision radius until the end of the week)",
+                        "visit": "\n\nThe astronomer asks you to take his apprentice with you. The young man has been sitting in the tower for too long, and you could use his skills with a telescope. But in a week, the astronomer will be making important observations, and he will need the apprentice himself.",
+                        "visited": "\n\nThe astronomer is not there. There is a note on the observatory door: \"I'll be there in a week\"."
                     }
                 }
             },
@@ -391,7 +429,8 @@
                     ],
                     "text": {
                         "hint": "(Upgrade a random secondary skill once per hero)",
-                        "cannotVisit": "\n\nEntering the shack, you find that the owner of the house is not there, but the walls are covered with pages from scientific books. The manuals are interesting, but difficult - first you will have to read a textbook for beginners somewhere.",
+                        "cannotVisit": "\n\nEntering the shack, you discover the walls are covered with pages from scientific books. You can't read anything new, and then the owner, a hermit, suddenly appears and rudely ejects you from his home.",
+                        "noBasicOrAdvancedSkill": "\n\nEntering the shack, you find that the owner of the house is not there, but the walls are covered with pages from scientific books. The manuals are interesting, but difficult - first you will have to read a textbook for beginners somewhere.",
                         "visit": "\n\nEntering the shack, you find that the owner of the house is not there, but the walls are covered with pages from scientific books. In the corner near the fireplace, you manage to read something useful.",
                         "visited": "\n\nEntering the shack, you discover that no repairs have been made since your last visit, and the walls are still covered with the same familiar manuscripts."
                     }
@@ -439,10 +478,10 @@
                     "name": "Warlock's Lab",
                     "text": {
                         "dlgHint": "Resources can be turned into each other, but only rare ones. If you want something transmuted, click on the initial and desired resources.",
-                        "dlgHintDeal": "Transmute: get %d %s %s from %d %s %s.",
-                        "dlgHintDealDone": "The process was successful; here are your new resources. Anything else you need transmuted?",
-                        "dlgHintAvalObjs": "Resources for transmutation",
-                        "dlgHintButtonDeal": "Transmute"
+                        "dlgHint1": "The process was successful; here are your new resources. Anything else you need transmuted?",
+                        "dlgHint2": "Resources for transmutation",
+                        "dlgHint3": "Transmute: get %d %s %s from %d %s %s.",
+                        "dlgHint4": "Transmute"
                     },
                     "sound": {
                         "enter": "STORE.wav",
@@ -510,19 +549,17 @@
                     "value": 500,
                     "density": 400,
                     "name": "Sea Barrel",
+                    "text": {
+                        "visit": "\n\nThere's no water or wine in this barrel. Someone hid contraband in it!",
+                        "visited": "\n\nThis barrel is filled to the brim with... seawater. It's unclear why it's still afloat."
+                    },
                     "sound": {
                         "enter": "GENIE.wav"
                     },
                     "properties": [
                         "AVAbrrlw.def 011111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 100000000 145 1 0 0"
-                    ],
-                    "text": {
-                        "visit": "\n\nThere's no water or wine in this barrel. Someone hid contraband in it!",
-                        "visited": "\n\nThis barrel is filled to the brim with... seawater. It's unclear why it's still afloat."
-                    }
+                    ]
                 },
-
-
                 "2": {
                     "value": 500,
                     "density": 600,
@@ -534,16 +571,51 @@
                         "AVAcratw.def 011111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 100000000 145 2 0 0"
                     ],
                     "text": {
-                        "visit": "\n\nYou inspect the Jetsam. Most of it is damaged, only the ore is intact.",
+                        "visit1state": "\n\nYou inspect the Jetsam. Most of it is damaged, only the ore is intact.",
                         "visit2state": "\n\nYou inspect the Jetsam. Some ore and gold remains.",
                         "visit3state": "\n\nYou inspect the Jetsam. The crates contain a considerable amount of ore and gold.",
                         "visited": "\n\nYou inspect the Jetsam. Unfortunately, everything is irreparably damaged."
                     }
+                },
+                "3": {
+                    "value": 3000,
+                    "density": 50,
+                    "name": "Vial of Mana",
+                    "sound": {
+                        "enter": "BOTTLVIS.wav"
+                    },
+                    "properties": [
+                        "AVAmnbtw.def 011111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 100000000 145 3 0 0"
+                    ],
+                    "text": {
+                        "visit": "\n\nHaving fished out the Vial, you discover there's no letter in it — only fresh water. It's quite refreshing, though."
+                    }
                 }
             },
             "146": {
+                "0": {
+                    "value": 8000,
+                    "density": 20,
+                    "name": "Seafaring Academy",
+                    "sound": {
+                        "enter": "ACADEMYV.wav",
+                        "loop": ""
+                    },
+                    "properties": [
+                        "AVSwacad.def 000011111001111111111111111111111111111111111111 001000000000000000000000000000000000000000000000 111111111 100000000 146 0 0 0"
+                    ],
+                    "text": {
+                        "dlgHint": "Flapping sails and screeching ropes are music for the ears of those who graduated this ancient Academy. A midshipman can master the following skills here.",
+                        "dlgHint1": "Your hero has already mastered this skill to a point where he could be rather teaching it himself.",
+                        "dlgHint2": "An academy warden approaches, squinting his surviving eye and scratching the eyebrow above eyepatch. \"A degree in %s %s will set you back %d gold.\"",
+                        "dlgHint3": "Purchase %s training",
+                        "dlgHint4": "Leave the academy",
+                        "info": "(Train secondary skills for 2000 gold each level)",
+                        "hint": "(%s, %s, %s)"
+                    }
+                },
                 "1": {
-                    "zone": 1,
+                    "map": 3,
                     "value": 500,
                     "density": 20,
                     "name": "Observatory",
@@ -552,7 +624,6 @@
                         "loop": ""
                     },
                     "properties": [
-                        "avxobsv1.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011111111 146 1 0 0",
                         "avxobsvw.def 000111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 111111111 100000000 146 1 0 0"
                     ],
                     "text": {
@@ -560,6 +631,38 @@
                         "visit": "\n\nThe astronomer asks you to take his apprentice with you. The young man has been sitting in the tower for too long, and you could use his skills with a telescope. But in a week, the astronomer will be making important observations, and he will need the apprentice himself.",
                         "visited": "\n\nThe astronomer is not there. There is a note on the observatory door: \"I'll be there in a week\"."
                     }
+                },
+                "2": {
+                    "map": 3,
+                    "value": 100,
+                    "density": 20,
+                    "name": "Altar of Mana",
+                    "text": {
+                        "dlgHint": "Spell points to your max:",
+                        "dlgHint1": "Total spell points on the Altar:",
+                        "dlgHint2": "%s pts",
+                        "dlgHint3": "Number of creatures / Spell points value",
+                        "dlgHint4": "Sacrifice anything currently on the Altar, and gain spell points."
+                    },
+                    "sound": {
+                        "enter": "MYSTERY.wav"
+                    },
+                    "properties": [
+                        "AVXMALTW.def 001111111011111111111111111111111111111111111111 110000000000000000000000000000000000000000000000 111111111 100000000 146 2 0 0"
+                    ]
+
+                },
+                "3": {
+                    "zone": 1,
+                    "value": 10000,
+                    "density": 20,
+                    "name": "Town Gate",
+                    "sound": {
+                        "enter": "MYSTERY.wav"
+                    },
+                    "properties": [
+                        "avxtwngt.def 000111111111111111111111111111111111111111111111 010000000000000000000000000000000000000000000000 011111111 011111111 146 3 0 0"
+                    ]
                 }
             },
             "213": {
@@ -575,6 +678,16 @@
             }
         },
         "notImplemented": {
+            "58": {
+                "1": {
+                    "value": 750,
+                    "density": 100,
+                    "name": "Observation Tower",
+                    "properties": [
+                        "avwtobtw.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 100000000 58 1 0 0"
+                    ]
+                }
+            },
             "144": {
                 "8": {
                     "zone": 4,
