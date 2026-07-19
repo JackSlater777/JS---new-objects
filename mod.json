@@ -1,6 +1,6 @@
 {
 	"caption": {
-		"en_US": "JS - new objects v.1.35.2",
+		"en_US": "JS - new objects v.1.35.3",
 		"ru_RU": ""
 	},
 	"description": {
@@ -19,7 +19,7 @@
 		"file": "js - new objects.png",
 		"index": 0
 	},
-	"mod_version": "1.35.2",
+	"mod_version": "1.35.3",
 	"priority": 2,
 	"compatibility": {
 		"class": "default",
