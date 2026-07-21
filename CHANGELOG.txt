@@ -1,3 +1,15 @@
+Version 1.36 (21.07.2026)
+- added numbers for pictures, such as morale and luck during the object visit
+- added a picture for extra movement points (positive and negative) - all credits for graphics to HotA-team
+- added a picture for extra scouting radius (positive and negative) - all credits for graphics to Grossmaestro
+- added a picture for combined +1/+1 morale and luck bonus - all credits for graphics to Grossmaestro
+- added a picture for extra pathfinding effect - all credits for graphics to Grossmaestro
+- added a picture for extra navigation effect - all credits for graphics to Grossmaestro
+- added many extra hints for the message boxes during objects visit
+- all dialogues using pictures above are compatible with HD-mod
+- now AI bares in mind new objects when scouting a map
+
+
 Version 1.35 (18.07.2026)
 - added Vial of Mana
 - added Seafaring Academy
