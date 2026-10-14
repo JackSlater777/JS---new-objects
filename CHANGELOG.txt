@@ -1,3 +1,7 @@
+Version 1.40 (15.10.2026)
+- the plugin has been migrated to the new RMG Objects Extender API
+- fixed compatibility between the negative morale hints received when visiting objects and wog native dialogs
+
 Version 1.36 (21.07.2026)
 - added numbers for pictures, such as morale and luck during the object visit
 - added a picture for extra movement points (positive and negative) - all credits for graphics to HotA-team
