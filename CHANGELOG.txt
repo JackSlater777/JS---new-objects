@@ -1,3 +1,7 @@
+Version 1.42 (03.11.2026)
+- Fixed a crash that occurred when viewing the turn of an opponent who had visited water taverns or prisons
+
+
 Version 1.41 (31.10.2026)
 - Hermits Shack - a principle of deterministic randomness has been implemented: revisiting the object after downloading the save does not change which skill will be upgraded
 
