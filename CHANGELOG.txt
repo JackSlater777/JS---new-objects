@@ -1,3 +1,7 @@
+Version 1.43 (16.11.2026)
+- Fixed incorrect lenght of several def names
+
+
 Version 1.42 (03.11.2026)
 - Fixed a crash that occurred when viewing the turn of an opponent who had visited water taverns or prisons
 
