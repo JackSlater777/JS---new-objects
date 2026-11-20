@@ -1,3 +1,10 @@
+Version 1.44 (20.11.2026)
+- Grave: moved from 141/1 -> 212/1001
+- Grave now is not triggerable (can't visit)
+- Added correct logic to AI for visiting a grave
+- Now, digging a grave can be seen in replay action
+
+
 Version 1.43 (16.11.2026)
 - Fixed incorrect lenght of several def names
 

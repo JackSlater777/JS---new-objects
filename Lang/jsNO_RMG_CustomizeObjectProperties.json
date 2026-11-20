@@ -182,39 +182,6 @@
                         "visit": "\n\nYou sit beneath the Dream Teacher, close your eyes, and suddenly find yourself inside a room with bookshelves lining every wall. There are no doors! For what seems like days, a cloaked figure reveals the secrets of those many books. You wake to find only a few seconds have passed!",
                         "visited": "\n\nYou sit beneath the Dream Teacher but you are unable to fall asleep. Perhaps you have already learned all that it can teach."
                     }
-                },
-                "1": {
-                    "zone": 4,
-                    "value": 500,
-                    "density": 30,
-                    "name": "Grave",
-                    "properties": [
-                        "avxgravw.def 011111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 011111111 001000001 141 1 0 0"
-                    ],
-                    "text": {
-                        "visit": "\n\nThis grave is fresh, and no one has even had time to take away the shovel that was used to dig it. It will take a whole day of excavation to get to the treasure.",
-                        "dig": "\n\nThis grave is fresh, and no one has even had time to take away the shovel that was used to dig it. Using it and tying a handkerchief around your nose, you extract something valuable from the earth.",
-                        "effectDesc": "Grave Digging -3"
-                    }
-                },
-                "2": {
-                    "enabled": false,
-                    "zone": 1,
-                    "value": 500,
-                    "density": 20,
-                    "name": "Observatory",
-                    "sound": {
-                        "enter": "LIGHTHOUSE.wav",
-                        "loop": ""
-                    },
-                    "properties": [
-                        "avxobsv1.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011111111 141 2 0 0"
-                    ],
-                    "text": {
-                        "hint": "(+2 to vision radius until the end of the week)",
-                        "visit": "\n\nThe astronomer asks you to take his apprentice with you. The young man has been sitting in the tower for too long, and you could use his skills with a telescope. But in a week, the astronomer will be making important observations, and he will need the apprentice himself.",
-                        "visited": "\n\nThe astronomer is not there. There is a note on the observatory door: \"I'll be there in a week\"."
-                    }
                 }
             },
             "142": {
@@ -665,6 +632,22 @@
                     ]
                 }
             },
+            "212": {
+                "1001": {
+                    "zone": 4,
+                    "value": 500,
+                    "density": 30,
+                    "name": "Grave",
+                    "properties": [
+                        "avxgravw.def 011111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 011111111 001000001 212 1001 0 0"
+                    ],
+                    "text": {
+                        "visit": "\n\nThis grave is fresh, and no one has even had time to take away the shovel that was used to dig it. It will take a whole day of excavation to get to the treasure.",
+                        "dig": "\n\nThis grave is fresh, and no one has even had time to take away the shovel that was used to dig it. Using it and tying a handkerchief around your nose, you extract something valuable from the earth.",
+                        "effectDesc": "Grave Digging -3"
+                    }
+                }
+            },
             "213": {
                 "0": {
                     "zone": 1,
@@ -686,6 +669,27 @@
                     "properties": [
                         "avwtobtw.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 100000000 58 1 0 0"
                     ]
+                }
+            },
+            "141": {
+                "2": {
+                    "enabled": false,
+                    "zone": 1,
+                    "value": 500,
+                    "density": 20,
+                    "name": "Observatory",
+                    "sound": {
+                        "enter": "LIGHTHOUSE.wav",
+                        "loop": ""
+                    },
+                    "properties": [
+                        "avxobsv1.def 001111111111111111111111111111111111111111111111 100000000000000000000000000000000000000000000000 111111111 011111111 141 2 0 0"
+                    ],
+                    "text": {
+                        "hint": "(+2 to vision radius until the end of the week)",
+                        "visit": "\n\nThe astronomer asks you to take his apprentice with you. The young man has been sitting in the tower for too long, and you could use his skills with a telescope. But in a week, the astronomer will be making important observations, and he will need the apprentice himself.",
+                        "visited": "\n\nThe astronomer is not there. There is a note on the observatory door: \"I'll be there in a week\"."
+                    }
                 }
             },
             "144": {
